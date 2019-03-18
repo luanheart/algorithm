@@ -48,7 +48,7 @@ public class CircleQueue {
     }
 
     public static void main(String[] args) {
-        ArrayQueue queue = new ArrayQueue(4);
+        CircleQueue queue = new CircleQueue(4);
         String[] data = {"1", "2", "3", "4"};
         for (int i = 0; i < data.length; i++) {
             queue.enqueue(data[i]);
