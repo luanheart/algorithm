@@ -1,4 +1,6 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
@@ -6,8 +8,17 @@ public class Test {
 
     public static void main(String[] args) {
 
-        int[] a = {1, 3, 5, 1, 3, 7, 2, 6};
-        System.out.println(kthSmallest(a, 2));
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DAY_OF_YEAR, 1);
+        // 改成这样就好了
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        int xx = (int)((cal.getTimeInMillis() - System.currentTimeMillis()) / 1000);
+        System.out.println(xx);
+        System.out.println(LocalDate.now());
+
     }
 
     public static int kthSmallest(int[] arr, int k) {
